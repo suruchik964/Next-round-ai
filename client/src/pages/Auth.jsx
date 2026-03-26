@@ -44,7 +44,7 @@ function Auth({isModel = false}) {
         bg-white shadow-sm border border-gray-200
       `}>
             <div className='flex items-center justify-center gap-3 mb-6'>
-                <div className='bg-gradient-to-r from-[#6600CC] to-[#7A33D1] text-white p-2 rounded-lg'>
+                <div className='bg-linear-to-r from-[#6600CC] to-[#7A33D1] text-white p-2 rounded-lg'>
                     <BsRobot size={18}/>
 
                 </div>
@@ -70,7 +70,7 @@ function Auth({isModel = false}) {
             onClick={handleGoogleAuth}
             whileHover={{opacity:0.9 , scale:1.03}}
             whileTap={{opacity:1 , scale:0.98}}
-            className='w-full flex items-center justify-center gap-3 py-3 bg-gradient-to-r from-[#6600CC] to-[#7A33D1] hover:from-[#5B00B3] hover:to-[#7A33D1] text-white rounded-full shadow-sm transition active:scale-95'>
+            className='w-full flex items-center justify-center gap-3 py-3 bg-linear-to-r from-[#6600CC] to-[#7A33D1] hover:from-[#5B00B3] hover:to-[#7A33D1] text-white rounded-full shadow-sm transition active:scale-95'>
                 <FcGoogle size={20}/>
                 Continue with Google
 
