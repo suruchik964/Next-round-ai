@@ -61,8 +61,8 @@ function Navbar() {
 
                     {showCreditPopup && (
                         <div className='absolute right-[-50px] mt-3 w-64 bg-white shadow-xl border border-gray-200 rounded-xl p-5 z-50'>
-                            <p className='text-sm text-gray-600 mb-4'>Need more credits to continue interviews?</p>
-                            <button onClick={()=>navigate("/pricing")} className='w-full bg-black text-white py-2 rounded-lg text-sm'>Buy more credits</button>
+                            <p className='text-sm text-gray-600 mb-4'>Need more credits to continue practicing?</p>
+                            <button onClick={()=>navigate("/pricing")} className='w-full bg-black text-white py-2 rounded-lg text-sm'>Get more credits</button>
 
                         </div>
                     )}
@@ -86,7 +86,7 @@ function Navbar() {
                         <div className='absolute right-0 mt-3 w-48 bg-white shadow-xl border border-gray-200 rounded-xl p-4 z-50'>
                             <p className='text-md text-blue-500 font-medium mb-1'>{userData?.name}</p>
 
-                            <button onClick={()=>navigate("/history")} className='w-full text-left text-sm py-2 hover:text-black text-gray-600'>InterView History</button>
+                            <button onClick={()=>navigate("/history")} className='w-full text-left text-sm py-2 hover:text-black text-gray-600'>Interview History</button>
                             <button onClick={handleLogout} 
                             className='w-full text-left text-sm py-2 flex items-center gap-2 text-red-500'>
                                 <HiOutlineLogout size={16}/>

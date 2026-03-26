@@ -356,7 +356,7 @@ function Step2Interview({ interviewData, onFinish }) {
                   Status
                 </span>
                 {isAIPlaying && <span className='text-[10px] sm:text-xs font-semibold text-emerald-600 truncate ml-1'>
-                  {isAIPlaying ? "AI Speaking" : ""}
+                  {isAIPlaying ? "AI is speaking" : ""}
                 </span>}
               </div>
 
@@ -395,7 +395,7 @@ function Step2Interview({ interviewData, onFinish }) {
 
         <div className='flex-1 flex flex-col p-4 sm:p-6 md:p-8 relative'>
           <h2 className='text-xl sm:text-2xl font-bold text-emerald-600 mb-6'>
-            AI Smart Interview
+            Live AI Interview
           </h2>
 
 
@@ -410,7 +410,7 @@ function Step2Interview({ interviewData, onFinish }) {
 
           {!isIntroPhase && !feedback && (
             <div className="flex items-center justify-between mb-3 px-2">
-              <span className="text-sm font-medium text-gray-500">Your Audio Response</span>
+              <span className="text-sm font-medium text-gray-500">Your Voice Response</span>
               <div className="w-24 h-6">
                 <AudioVisualizer isListening={isMicOn && !isAIPlaying} />
               </div>
@@ -418,7 +418,7 @@ function Step2Interview({ interviewData, onFinish }) {
           )}
 
           <textarea
-            placeholder="Type your answer here..."
+            placeholder="Speak or type your answer here..."
             onChange={(e) => setAnswer(e.target.value)}
             value={answer}
             className="flex-1 bg-gray-100 p-4 sm:p-6 rounded-2xl resize-none outline-none border border-gray-200 focus:ring-2 focus:ring-emerald-500 transition text-gray-800" />
@@ -442,7 +442,7 @@ function Step2Interview({ interviewData, onFinish }) {
               disabled={isSubmitting}
               whileTap={{ scale: 0.95 }}
               className='flex-1 bg-gradient-to-r from-emerald-600 to-teal-500 text-white py-3 sm:py-4 rounded-2xl shadow-lg hover:opacity-90 transition font-semibold disabled:bg-gray-500'>
-              {isSubmitting ? "Submitting..." : "Submit Answer"}
+              {isSubmitting ? "Submitting..." : "Submit Response"}
 
             </motion.button>
 
@@ -457,7 +457,7 @@ function Step2Interview({ interviewData, onFinish }) {
                 onClick={handleNext}
 
                 className='w-full bg-gradient-to-r from-emerald-600 to-teal-500 text-white py-3 rounded-xl shadow-md hover:opacity-90 transition flex items-center justify-center gap-1'>
-                Next Question <BsArrowRight size={18} />
+                Continue to Next Question <BsArrowRight size={18} />
               </button>
 
             </motion.div>

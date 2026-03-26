@@ -86,12 +86,12 @@ function Step1SetUp({ onStart }) {
                     className='relative bg-gradient-to-br from-green-50 to-green-100 p-12 flex flex-col justify-center'>
 
                     <h2 className="text-4xl font-bold text-gray-800 mb-6">
-                        Start Your AI Interview
+                        Start Your Mock Interview
                     </h2>
 
                     <p className="text-gray-600 mb-10">
-                        Practice real interview scenarios powered by AI.
-                        Improve communication, technical skills, and confidence.
+                        Practice interview questions tailored to your target role.
+                        Build clarity, confidence, and job readiness with AI feedback.
                     </p>
 
                     <div className='space-y-5'>
@@ -100,15 +100,15 @@ function Step1SetUp({ onStart }) {
                             [
                                 {
                                     icon: <FaUserTie className="text-green-600 text-xl" />,
-                                    text: "Choose Role & Experience",
+                                    text: "Choose Your Role & Experience",
                                 },
                                 {
                                     icon: <FaMicrophoneAlt className="text-green-600 text-xl" />,
-                                    text: "Smart Voice Interview",
+                                    text: "AI-Led Voice Interview",
                                 },
                                 {
                                     icon: <FaChartLine className="text-green-600 text-xl" />,
-                                    text: "Performance Analytics",
+                                    text: "Detailed Performance Insights",
                                 },
                             ].map((item, index) => (
                                 <motion.div key={index}
@@ -138,7 +138,7 @@ function Step1SetUp({ onStart }) {
                     className="p-12 bg-white">
 
                     <h2 className='text-3xl font-bold text-gray-800 mb-8'>
-                        Interview SetUp
+                        Interview Setup
                     </h2>
 
 
@@ -147,7 +147,7 @@ function Step1SetUp({ onStart }) {
                         <div className='relative'>
                             <FaUserTie className='absolute top-4 left-4 text-gray-400' />
 
-                            <input type='text' placeholder='Enter role'
+                            <input type='text' placeholder='Enter job role (e.g., Frontend Developer)'
                                 className='w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition'
                                 onChange={(e) => setRole(e.target.value)} value={role} />
                         </div>
@@ -156,7 +156,7 @@ function Step1SetUp({ onStart }) {
                         <div className='relative'>
                             <FaBriefcase className='absolute top-4 left-4 text-gray-400' />
 
-                            <input type='text' placeholder='Experience (e.g. 2 years)'
+                            <input type='text' placeholder='Enter experience (e.g., 2 years)'
                                 className='w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition'
                                 onChange={(e) => setExperience(e.target.value)} value={experience} />
 
@@ -168,8 +168,8 @@ function Step1SetUp({ onStart }) {
                             onChange={(e) => setMode(e.target.value)}
                             className='w-full py-3 px-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none transition'>
 
-                            <option value="Technical">Technical Interview</option>
-                            <option value="HR">HR Interview</option>
+                            <option value="Technical">Technical Interview Mode</option>
+                            <option value="HR">HR Interview Mode</option>
 
                         </select>
 
@@ -188,7 +188,7 @@ function Step1SetUp({ onStart }) {
                                     onChange={(e) => setResumeFile(e.target.files[0])} />
 
                                 <p className='text-gray-600 font-medium'>
-                                    {resumeFile ? resumeFile.name : "Click to upload resume (Optional)"}
+                                    {resumeFile ? resumeFile.name : "Click to upload your resume (optional)"}
                                 </p>
 
                                 {resumeFile && (
@@ -200,7 +200,7 @@ function Step1SetUp({ onStart }) {
                                         }}
 
                                         className='mt-4 bg-gray-900 text-white px-5 py-2 rounded-lg hover:bg-gray-800 transition'>
-                                        {analyzing ? "Analyzing..." : "Analyze Resume"}
+                                        {analyzing ? "Analyzing Resume..." : "Analyze Resume"}
 
 
 
@@ -217,12 +217,12 @@ function Step1SetUp({ onStart }) {
                                 animate={{ opacity: 1, y: 0 }}
                                 className='bg-gray-50 border border-gray-200 rounded-xl p-5 space-y-4'>
                                 <h3 className='text-lg font-semibold text-gray-800'>
-                                    Resume Analysis Result</h3>
+                                    Resume Analysis Summary</h3>
 
                                 {projects.length > 0 && (
                                     <div>
                                         <p className='font-medium text-gray-700 mb-1'>
-                                            Projects:</p>
+                                            Projects Found:</p>
 
                                         <ul className='list-disc list-inside text-gray-600 space-y-1'>
                                             {projects.map((p, i) => (
@@ -235,7 +235,7 @@ function Step1SetUp({ onStart }) {
                                 {skills.length > 0 && (
                                     <div>
                                         <p className='font-medium text-gray-700 mb-1'>
-                                            Skills:</p>
+                                            Skills Found:</p>
 
                                         <div className='flex flex-wrap gap-2'>
                                             {skills.map((s, i) => (
@@ -255,7 +255,7 @@ function Step1SetUp({ onStart }) {
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.95 }}
                             className='w-full disabled:bg-gray-600 bg-green-600 hover:bg-green-700 text-white py-3 rounded-full text-lg font-semibold transition duration-300 shadow-md'>
-                            {loading ? "Staring...":"Start Interview"}
+                            {loading ? "Starting...":"Start Your Interview"}
 
 
                         </motion.button>

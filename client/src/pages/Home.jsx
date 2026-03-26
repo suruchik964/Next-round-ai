@@ -38,7 +38,7 @@ function Home() {
           <div className='flex justify-center mb-6'>
             <div className='bg-gray-100 text-gray-600 text-sm px-4 py-2 rounded-full flex items-center gap-2'>
               <HiSparkles size={16} className="bg-green-50 text-green-600" />
-              AI Powered Smart Interview Platform
+              AI-Powered Mock Interview Platform
             </div>
 
 
@@ -49,10 +49,10 @@ function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className='text-4xl md:text-6xl font-semibold leading-tight max-w-4xl mx-auto'>
-              Practice Interviews with
+              Practice Real Interviews with
               <span className='relative inline-block'>
                 <span className='bg-green-100 text-green-600 px-5 py-1 rounded-full'>
-                  AI Intelligence
+                  AI Interview Coach
 
                 </span>
               </span>
@@ -66,8 +66,8 @@ function Home() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
               className='text-gray-500 mt-6 max-w-2xl mx-auto text-lg'>
-              Role-based mock interviews with smart follow-ups,
-              adaptive difficulty and real-time performance evaluation.
+              Practice role-specific interviews with an AI interviewer, adaptive follow-up questions,
+              and instant feedback to improve confidence and performance.
 
             </motion.p>
 
@@ -83,7 +83,7 @@ function Home() {
                 whileHover={{ opacity: 0.9, scale: 1.03 }}
                 whileTap={{ opacity: 1, scale: 0.98 }}
                 className='bg-black text-white px-10 py-3 rounded-full hover:opacity-90 transition shadow-md'>
-                Start Interview
+                Start Your Interview
 
               </motion.button>
 
@@ -98,7 +98,7 @@ function Home() {
                 whileHover={{ opacity: 0.9, scale: 1.03 }}
                 whileTap={{ opacity: 1, scale: 0.98 }}
                 className='border border-gray-300 px-10 py-3 rounded-full hover:bg-gray-100 transition'>
-                View History
+                View Past Interviews
 
               </motion.button>
             </div>
@@ -110,20 +110,20 @@ function Home() {
                 {
                   icon: <BsRobot size={24} />,
                   step: "STEP 1",
-                  title: "Role & Experience Selection",
-                  desc: "AI adjusts difficulty based on selected job role."
+                  title: "Choose Role & Experience",
+                  desc: "Pick your target role so AI asks questions at the right level."
                 },
                 {
                   icon: <BsMic size={24} />,
                   step: "STEP 2",
-                  title: "Smart Voice Interview",
-                  desc: "Dynamic follow-up questions based on your answers."
+                  title: "Live AI Interview",
+                  desc: "Answer naturally and get smart follow-up questions in real time."
                 },
                 {
                   icon: <BsClock size={24} />,
                   step: "STEP 3",
-                  title: "Timer Based Simulation",
-                  desc: "Real interview pressure with time tracking."
+                  title: "Timed Practice Session",
+                  desc: "Simulate real interview pressure with a built-in timer."
                 }
               ].map((item, index) => (
                 <motion.div key={index}
@@ -162,7 +162,7 @@ function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className='text-4xl font-semibold text-center mb-16'>
-              Advanced AI{" "}
+              Powerful AI{" "}
               <span className="text-green-600">Capabilities</span>
 
             </motion.h2>
@@ -173,26 +173,26 @@ function Home() {
                   {
                     image: evalImg,
                     icon: <BsBarChart size={20} />,
-                    title: "AI Answer Evaluation",
-                    desc: "Scores communication, technical accuracy and confidence."
+                    title: "Instant Answer Feedback",
+                    desc: "Get scores for communication, technical accuracy, and confidence."
                   },
                   {
                     image: resumeImg,
                     icon: <BsFileEarmarkText size={20} />,
-                    title: "Resume Based Interview",
-                    desc: "Project-specific questions based on uploaded resume."
+                    title: "Resume-Based Questions",
+                    desc: "Upload your resume to get project and skills-based questions."
                   },
                   {
                     image: pdfImg,
                     icon: <BsFileEarmarkText size={20} />,
                     title: "Downloadable PDF Report",
-                    desc: "Detailed strengths, weaknesses and improvement insights."
+                    desc: "Review strengths, gaps, and clear next-step improvements."
                   },
                   {
                     image: analyticsImg,
                     icon: <BsBarChart size={20} />,
-                    title: "History & Analytics",
-                    desc: "Track progress with performance graphs and topic analysis."
+                    title: "Interview History & Analytics",
+                    desc: "Track progress over time with score trends and topic insights."
                   }
                 ].map((item, index) => (
                   <motion.div key={index}
@@ -231,7 +231,7 @@ function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className='text-4xl font-semibold text-center mb-16'>
-              Multiple Interview{" "}
+              Interview{" "}
               <span className="text-green-600">Modes</span>
 
             </motion.h2>
@@ -242,23 +242,23 @@ function Home() {
                   {
                     img: hrImg,
                     title: "HR Interview Mode",
-                    desc: "Behavioral and communication based evaluation."
+                    desc: "Practice behavioral and communication-focused interview rounds."
                   },
                   {
                     img: techImg,
-                    title: "Technical Mode",
-                    desc: "Deep technical questioning based on selected role."
+                    title: "Technical Interview Mode",
+                    desc: "Get role-specific technical questions matched to your experience."
                   },
 
                   {
                     img: confidenceImg,
-                    title: "Confidence Detection",
-                    desc: "Basic tone and voice analysis insights."
+                    title: "Confidence Insights",
+                    desc: "Understand your speaking tone and delivery confidence."
                   },
                   {
                     img: creditImg,
-                    title: "Credits System",
-                    desc: "Unlock premium interview sessions easily."
+                    title: "Flexible Credits",
+                    desc: "Use credits to unlock more practice interviews anytime."
                   }
                 ].map((mode, index) => (
                   <motion.div key={index}
