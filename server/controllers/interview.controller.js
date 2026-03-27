@@ -94,12 +94,6 @@ export const generateQuestion = async (req, res) => {
       });
     }
 
-    if (user.credits < 50) {
-      return res.status(400).json({
-        message: "Not enough credits. Minimum 50 required."
-      });
-    }
-
     const projectText = Array.isArray(projects) && projects.length
       ? projects.join(", ")
       : "None";
@@ -187,9 +181,6 @@ Make questions based on the candidate’s role, experience,interviewMode, projec
       });
     }
 
-    user.credits -= 50;
-    await user.save();
-
     const interview = await Interview.create({
       userId: user._id,
       role,
@@ -205,7 +196,6 @@ Make questions based on the candidate’s role, experience,interviewMode, projec
 
     res.json({
       interviewId: interview._id,
-      creditsLeft: user.credits,
       userName: user.name,
       questions: interview.questions
     });

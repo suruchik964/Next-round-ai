@@ -10,11 +10,7 @@ import {
 import { useState } from 'react';
 import axios from "axios"
 import { ServerUrl } from '../App';
-import { useDispatch, useSelector } from 'react-redux';
-import { setUserData } from '../redux/userSlice';
 function Step1SetUp({ onStart }) {
-    const {userData}= useSelector((state)=>state.user)
-    const dispatch = useDispatch()
     const [role, setRole] = useState("");
     const [experience, setExperience] = useState("");
     const [mode, setMode] = useState("Technical");
@@ -59,9 +55,6 @@ function Step1SetUp({ onStart }) {
         try {
            const result = await axios.post(ServerUrl + "/api/interview/generate-questions" , {role, experience, mode , resumeText, projects, skills } , {withCredentials:true}) 
            console.log(result.data)
-           if(userData){
-            dispatch(setUserData({...userData , credits:result.data.creditsLeft}))
-           }
            setLoading(false)
            onStart(result.data)
 

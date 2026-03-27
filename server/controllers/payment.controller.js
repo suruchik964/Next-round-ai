@@ -5,6 +5,10 @@ import crypto from "crypto"
 
 export const createOrder = async (req,res) => {
     try {
+        if (!razorpay) {
+      return res.status(503).json({ message: "Payments are not configured" });
+    }
+
         const {planId, amount, credits} = req.body;
           if (!amount || !credits) {
       return res.status(400).json({ message: "Invalid plan data" });
@@ -38,6 +42,10 @@ export const createOrder = async (req,res) => {
 
 export const verifyPayment = async (req,res) => {
     try {
+        if (!razorpay || !process.env.RAZORPAY_KEY_SECRET) {
+      return res.status(503).json({ message: "Payments are not configured" });
+    }
+
         const {razorpay_order_id,
       razorpay_payment_id,
       razorpay_signature} = req.body
